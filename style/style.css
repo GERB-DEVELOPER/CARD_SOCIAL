@@ -1,0 +1,132 @@
+:root {
+  /* paleta de colores */
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+  /* agregar valores de tipografia */
+  --font-family: "Inter", sans-serif;
+  --Font-size-paragraph: 14px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  /* varios */
+  --border-radius-card: 16px;
+  --border-radius-imagen: 50%;
+}
+/* reset basico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Grey-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  /* margin: 1rem; */
+  background-color: var(--Grey-800);
+  width: min(320px, 90%);
+  min-height: 550px;
+  border-radius: var(--border-radius-card);
+  -webkit-border-radius: var(--border-radius-card);
+  -moz-border-radius: var(--border-radius-card);
+  -ms-border-radius: var(--border-radius-card);
+  -o-border-radius: var(--border-radius-card);
+  .card__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .card__header--image {
+      width: 90px;
+      height: 90px;
+      margin-top: 25px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border-radius: var(--border-radius-imagen);
+      -webkit-border-radius: var(--border-radius-imagen);
+      -moz-border-radius: var(--border-radius-imagen);
+      -ms-border-radius: var(--border-radius-imagen);
+      -o-border-radius: var(--border-radius-imagen);
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--border-radius-imagen);
+        -webkit-border-radius: var(--border-radius-imagen);
+        -moz-border-radius: var(--border-radius-imagen);
+        -ms-border-radius: var(--border-radius-imagen);
+        -o-border-radius: var(--border-radius-imagen);
+        object-fit: cover;
+      }
+    }
+    .card__header--personaldata {
+      width: 100%;
+      .name {
+        /* background-color: blanchedalmond; */
+        text-align: center;
+        color: var(--White);
+        font-size: 25px;
+        font-weight: var(--font-weight-bold);
+      }
+      .country {
+        color: var(--Green);
+        text-align: center;
+        font-size: var(--Font-size-paragraph);
+        font-weight: var(--font-weight-bold);
+      }
+    }
+  }
+  .card__title {
+    color: var(--White);
+    text-align: center;
+    font-size: var(--Font-size-paragraph);
+    font-weight: var(--font-weight-regular);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btn {
+      text-align: center;
+      width: 85%;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: var(--Grey-700);
+      color: var(--White);
+      font-weight: var(--font-weight-medium);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+
+    /* Hover effect */
+    .btn:hover {
+      background-color: var(--Green);
+      color: black;
+    }
+    .btn {
+      transition: background-color 0.3s ease;
+    }
+  }
+}
+
+/* footer de Frontend Mentor */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
